@@ -4,7 +4,7 @@ var subjectEmail = document.getElementById("subject");
 var subjectChecker = false;
 var emailChecker = false;
 var nameChecker = false;
-
+var messageChecker = false;
 let loading = document.querySelector(".loading");
 let errorMessage = document.querySelector(".error-message");
 let sentMessage = document.querySelector(".sent-message");
@@ -31,11 +31,25 @@ function validateName(){
     
 }
 
+function validateMessage() {
+    var message = document.getElementById("subject").value.trim();
+
+    if (message.length >= 2) {
+        messageChecker = true;
+        return true;
+    } else {
+        messageChecker = false;
+        return false;
+    }
+}
+
+
+
 // Form submit
 $("#submit-form").submit((e) => {
   e.preventDefault();
 
-  if (emailChecker && nameChecker) {
+  if (emailChecker && nameChecker && messageChecker) {
     // Show loading
     loading.style.display = "block";
     sentMessage.style.display = "none";
