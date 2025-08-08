@@ -8,6 +8,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -723,11 +724,11 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" id="fname" name="name" class="form-control" placeholder="Your Name">
+                  <input type="text" id="fname" name="name" class="form-control" placeholder="Your Name" onkeyup="validateName()" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" id="lname" class="form-control" name="email" placeholder="Your Email" >
+                  <input type="email" id="lname" class="form-control" name="email" placeholder="Your Email" onkeyup="validateEmail()" required="">
                 </div>
 
                 <span id="email-error"></span>
@@ -735,6 +736,10 @@
                 <div class="col-md-12">
                   <textarea id="subject" class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
+
+                <div class="loading">Loading</div>
+                <div class="error-message">Your message could not be sent</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
 
                 <div class="col-md-12 text-center">
                   <button type="submit">Send Message</button>
@@ -795,8 +800,7 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
