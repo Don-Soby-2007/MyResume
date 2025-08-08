@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 (function() {
   "use strict";
 
@@ -227,3 +219,5 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+

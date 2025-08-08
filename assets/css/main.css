@@ -1070,6 +1070,13 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+#email-error{
+  font-size: 16px;
+  margin-left: 20px;
+  font-weight: 400;
+  color: red;
+}
+
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
