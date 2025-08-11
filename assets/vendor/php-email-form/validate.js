@@ -12,9 +12,13 @@ let sentMessage = document.querySelector(".sent-message");
 function validateEmail(){
     if(!emailField.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/)){
         emailChecker = false;
+        
+        errorMessage.innerText = "The Email Must Be In Correct Form eg:(example@gmail.com)";
+        errorMessage.style.display = "block";
         return false;
     }else{
         emailChecker = true;
+        errorMessage.style.display = "none";
         return true;
     }
 }
@@ -23,9 +27,12 @@ function validateName(){
     var nameEmail = document.getElementById("fname").value;
     if(/^[A-Za-z\s]+$/.test(nameEmail) && (nameEmail.match(/[A-Za-z]/g) || []).length >= 3){
         nameChecker = true;
+        errorMessage.style.display = "none";
         return true;
     }else{
         nameChecker = false;
+        errorMessage.innerText = "The Name Must Be Contain 3 Characters";
+        errorMessage.style.display = "block";
         return false;
     }
     
@@ -36,9 +43,12 @@ function validateMessage() {
 
     if (message.length >= 2) {
         messageChecker = true;
+        errorMessage.style.display = "none"
         return true;
     } else {
         messageChecker = false;
+        errorMessage.innerText = "Write any message";
+        errorMessage.style.display = "block"
         return false;
     }
 }
